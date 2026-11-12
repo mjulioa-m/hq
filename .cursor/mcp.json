@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "hq": {
+      "command": "node",
+      "args": ["scripts/hq-mcp.mjs"]
+    }
+  }
+}

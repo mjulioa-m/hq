@@ -1,0 +1,16 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: hq-db-dev
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: hq
+      POSTGRES_PASSWORD: hq
+      POSTGRES_DB: hq
+    ports:
+      - "127.0.0.1:5433:5432"
+    volumes:
+      - hq_pgdata_dev:/var/lib/postgresql/data
+
+volumes:
+  hq_pgdata_dev:
